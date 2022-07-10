@@ -45,8 +45,14 @@
   font-size: 4rem;
 }
 
+.header{
+  margin: 0;
+  font-size: 2rem;
+}
+
 .title,
-.description {
+.description,
+.header {
   text-align: center;
 }
 

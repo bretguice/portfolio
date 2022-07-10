@@ -1,0 +1,27 @@
+.header{
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+  
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content{
+    margin: 5rem;
+    font-size: 1rem;
+}
+
+.content
+a{
+    font-size: 3rem;
+}
+
+.link{
+    margin: 5rem;
+  
+}

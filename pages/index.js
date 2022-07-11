@@ -1,5 +1,8 @@
 import Head from "next/head";
-import styles from '../styles/Home.module.css'
+import Image from "next/image";
+import classes from '../styles/Home.module.css';
+import bret from '../styles/img/home/bret.jpg'
+
 export default function HomePage(props) {
   return (
     <>
@@ -7,8 +10,14 @@ export default function HomePage(props) {
             <title>Bret Guice</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <h1 className={styles.title}>Bret Guice</h1>
-        <h5 className={styles.header}>Full Stack Web Developer</h5>
+        <div className={classes.container}>
+          <h1 className={classes.title}>Bret Guice</h1>
+          <h5 className={classes.header}>Full Stack Web Developer</h5>
+          <div className={classes.imgContainer}>
+            <Image className={classes.img} alt='Bret' src={bret} />
+          </div>
+        </div>
+
 
     </>
   )

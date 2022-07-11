@@ -7,7 +7,7 @@ function ProjectDetails({project}) {
         <div className={classes.container}>
             <h5 className={classes.title}>{project.title}</h5>
             <Link href={classes.url}>
-                <Image className={classes.img} src={project.img} alt={project.title}/>
+                <a><Image className={classes.img} src={project.img} alt={project.title}/></a>
             </Link>
             <p className={classes.description}>{project.description}</p>
             <div className={classes.links}>

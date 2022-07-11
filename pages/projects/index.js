@@ -7,6 +7,8 @@ import odinbook from '../../styles/img/odinbook.png';
 import calculator from '../../styles/img/calculator.png';
 import rock_paper_scissors from '../../styles/img/rock-paper-scissors.png'
 import resume_builder from '../../styles/img/resume_builder.png';
+import battleship from '../../styles/img/battleship.png';
+
 const projObj = [
 {
   id: 1,
@@ -28,8 +30,8 @@ const projObj = [
   id: 3,
   title: "Battleship",
   description: "Battleship game created using JavaScript.",
-  img: odinbook,
-  url: 'www.google.com',
+  img: battleship,
+  url: 'https://battleship-proj.netlify.app/',
   code: 'https://github.com/bretguice/battleship'
 },
 {

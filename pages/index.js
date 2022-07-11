@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from 'next/Link'
 import styles from '../styles/Home.module.css'
 export default function HomePage(props) {
   return (

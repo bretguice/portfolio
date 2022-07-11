@@ -8,12 +8,16 @@
     font-size: 1.5rem;
 }
 
-.img{
-    width: 400px;
+.imgContainer{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
 }
 
-.img:hover {
-    cursor: pointer;
+.img{
+    width: 150px;
+    height: 150px;
 }
 
 .description{

@@ -44,7 +44,7 @@ const projObj = [
 {
   id: 5,
   title: "Rock, Paper, Scissors",
-  description: "Rock, Paper, Scissors game built using HTML, CSS, and JavaScript",
+  description: "Rock, Paper, Scissors game built using HTML, CSS, and JavaScript.",
   img: rock_paper_scissors,
   url: 'https://bg-rock-paper-scissors-proj.netlify.app/',
   code: 'https://github.com/bretguice/Rock-Paper-Scissors'
@@ -52,7 +52,7 @@ const projObj = [
 {
   id: 6,
   title: "Todo List",
-  description: "Battleship game created using JavaScript.",
+  description: "Todo List app built using HTML, CSS, and JavaScript.",
   img: todo,
   url: 'https://bg-todo-list-proj.netlify.app/',
   code: 'https://github.com/bretguice/todo'

@@ -19,7 +19,7 @@ const projObj = [
 {
   id: 2,
   title: "Resume Builder",
-  description: "Website put together using the MERN Stack.",
+  description: "Resume Builder App built using React and Styled Components.",
   img: resume_builder,
   url: 'https://bretguice.github.io/cv-project/',
   code: 'https://github.com/bretguice/cv-project'
@@ -35,17 +35,17 @@ const projObj = [
 {
   id: 4,
   title: "Calculator",
-  description: "Battleship game created using JavaScript.",
+  description: "Calculator app built using HTML, CSS, and JavaScript.",
   img: calculator,
-  url: 'www.google.com',
+  url: 'https://bg-calculator-proj.netlify.app/',
   code: 'https://github.com/bretguice/calculator'
 },
 {
   id: 5,
   title: "Rock, Paper, Scissors",
-  description: "Battleship game created using JavaScript.",
+  description: "Rock, Paper, Scissors game built using HTML, CSS, and JavaScript",
   img: rock_paper_scissors,
-  url: 'www.google.com',
+  url: 'https://bg-rock-paper-scissors-proj.netlify.app/',
   code: 'https://github.com/bretguice/Rock-Paper-Scissors'
 },
 {

@@ -1,14 +1,13 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
-import classes from '../../styles/Home.module.css';
+import classes from '../../styles/Project.module.css';
 import ProjectDetails from '../../components/Projects/ProjectDetails';
 import odinbook from '../../styles/img/odinbook.png';
 import calculator from '../../styles/img/calculator.png';
 import rock_paper_scissors from '../../styles/img/rock-paper-scissors.png'
 import resume_builder from '../../styles/img/resume_builder.png';
 import battleship from '../../styles/img/battleship.png';
-
+import todo from '../../styles/img/todo.png';
 const projObj = [
 {
   id: 1,
@@ -54,16 +53,13 @@ const projObj = [
   id: 6,
   title: "Todo List",
   description: "Battleship game created using JavaScript.",
-  img: rock_paper_scissors,
-  url: 'www.google.com',
+  img: todo,
+  url: 'https://bg-todo-list-proj.netlify.app/',
   code: 'https://github.com/bretguice/todo'
 },
 ]
 
-const Projects = () => {
-  const router = useRouter();
-  // console.log(router.query.projectId)
-
+const Projects = () => { 
   return (
     <>
       <Head>

@@ -1,0 +1,25 @@
+.container {
+    padding: 0 2rem;
+    width: 100%;
+}
+  
+.subcontainer {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr  ;
+    grid-template-rows: auto;
+    gap: 3rem
+}
+
+.header{
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}  
+
+@media screen and (min-width:600px){
+    .subcontainer{
+        margin: 2rem;
+        grid-template-columns: repeat(3, 1fr);    
+    }
+}

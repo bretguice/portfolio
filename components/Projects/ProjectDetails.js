@@ -6,12 +6,13 @@ function ProjectDetails({project}) {
         <>
         <div className={classes.container}>
             <h5 className={classes.title}>{project.title}</h5>
-            <Link href={classes.url}>
-                <a><Image className={classes.img} src={project.img} alt={project.title}/></a>
+            <Link href={project.url}>
+                <Image className={classes.img} src={project.img} alt={project.title}/>
             </Link>
             <p className={classes.description}>{project.description}</p>
             <div className={classes.links}>
                 <Link className={classes.url} href={project.url}>Website</Link>
+                <br></br>
                 <Link className={classes.code} href={project.code}>Code</Link>
             </div>
         </div>

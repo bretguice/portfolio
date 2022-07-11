@@ -3,14 +3,6 @@
   width: 100%;
 }
 
-.subcontainer {
-  margin: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 3rem
-}
-
 .main {
   min-height: 100vh;
   padding: 4rem 0;

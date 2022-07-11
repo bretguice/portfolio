@@ -11,15 +11,21 @@
 .imgContainer{
     display: flex;
     background-color: white;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer .img{
+    max-width: 100%;
     justify-content: center;
     align-items: center;
 }
 
 .img{
-    width: 150px;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 .description{

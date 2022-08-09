@@ -93,7 +93,7 @@ const Skills = () => {
   return (
     <>
       <Head>
-          <title>My Skills</title>
+          <title>Bret Guice | Skills</title>
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <h2 className={classes.header}>My Skills</h2>
@@ -108,4 +108,13 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Skills;
+
+export const getStaticProps = async () => {
+  const res = await fetch('https://bg-portfolio-backend.herokuapp.com/skills/getSkills');
+  const data = await res.json();
+  return {
+      props: {projects: data }
+  }
+
+}

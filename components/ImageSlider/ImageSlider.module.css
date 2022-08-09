@@ -1,0 +1,30 @@
+.container{
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.left{
+    position: absolute;
+    top: 50%;
+    left: 1vw;
+    font-size: 1.5rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.right{
+    position: absolute;
+    top: 50%;
+    right: 1vw;
+    font-size: 1.5rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+

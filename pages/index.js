@@ -1,13 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import classes from '../styles/Home.module.css';
-import bret from '../styles/img/home/bret.jpg'
+import bret from '../styles/img/home/bret.jpg';
 
-export default function HomePage(props) {
+function HomePage(props) {
   return (
     <>
         <Head>
-            <title>Bret Guice</title>
+            <title>Bret Guice | Home</title>
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className={classes.container}>
@@ -17,9 +17,10 @@ export default function HomePage(props) {
             <Image className={classes.img} alt='Bret' src={bret} />
           </div>
         </div>
-
-
     </>
   )
 }
+
+
+export default HomePage;
 

@@ -1,0 +1,39 @@
+.header{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.container1,
+.container2,
+.container3{
+    border:1px solid black;
+    padding: 0.5rem;
+}
+
+.title{
+    width: 100%;
+}
+
+.website,
+.github{
+    width: 50%;
+}
+
+.description{
+    width: 100%;
+}
+
+.summary{
+    width: 100%;
+    min-height: 300px;
+}
+
+.skills{
+    list-style: none;
+}
+

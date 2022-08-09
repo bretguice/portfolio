@@ -1,0 +1,39 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    text-align: center;
+    margin: 0;
+}
+
+.description{
+    margin: 0;
+    text-align: center;
+}
+.slider{
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.summary{
+    margin: 1rem;
+}
+
+.links{
+    margin-top: 1rem;
+}
+
+.website,
+.code{
+    color: dodgerblue;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    font-size: 0.95rem;
+}

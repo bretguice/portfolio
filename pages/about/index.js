@@ -6,7 +6,7 @@ function About() {
   return (
     <>
       <Head>
-          <title>About Bret</title>
+          <title>Bret Guice | About</title>
           <link rel="icon" href="/favicon.ico" />
       </Head>
       <h2 className={classes.header}>About Me</h2>

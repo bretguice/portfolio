@@ -1,3 +1,4 @@
+import failedPage from '../404'
 // import React, { useState } from 'react';
 // import Head from 'next/head';
 // import { fileBase64 } from '../../utils/helperFunctions';
@@ -63,3 +64,13 @@
 // }
 
 // export default AddSkill;
+
+const addSkill = () =>{
+    return(
+        <>
+            <failedPage />
+        </>
+    )
+}
+
+export default addSkill;

@@ -1,16 +1,18 @@
-import Head from 'next/head';
-import Navigation from '../Navigation/Navigation';
-import Footer from '../Footer/Footer';
+import Link from 'next/link';
 import classes from './Layout.module.css';
 
-function Layout(props) {
+export default function Layout({ children }) {
   return (
     <>
-      <Navigation className={classes.header} /> 
-      <main className={classes.body}>{props.children}</main>
-      <Footer className={classes.footer} />
+      <a className={classes.skipLink} href="#main">Skip to content</a>
+      <header className={classes.siteHeader}>
+        <div className={classes.headerInner}>
+          <Link className={classes.brand} href="/" aria-label="Bret Guice, homepage">
+            Bret Guice
+          </Link>
+        </div>
+      </header>
+      <main id="main" tabIndex="-1">{children}</main>
     </>
-  )
+  );
 }
-
-export default Layout

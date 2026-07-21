@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Image from 'next/image';
+import Seo, { SITE_DESCRIPTION } from '../components/Seo/Seo';
 import classes from '../styles/Home.module.css';
 
 const questions = [
@@ -21,38 +21,18 @@ const examples = [
 
 export default function HomePage() {
   const year = new Date().getFullYear();
-  const description = 'About Bret Guice: how he approaches problems, why he works in college athletics, and what he is trying to build.';
+  const title = 'Bret Guice — Strategy, Systems and Meaningful Experiences';
+  const description = SITE_DESCRIPTION;
 
   return (
     <>
-      <Head>
-        <title>Bret Guice — College Athletics, Fan Experience &amp; Digital Work</title>
-        <meta name="description" content={description} />
-        <meta name="theme-color" content="#f5f2eb" />
-        <meta name="robots" content="index,follow" />
-        <link rel="canonical" href="https://bretguice.com/" />
-        <meta property="og:type" content="profile" />
-        <meta property="og:title" content="Bret Guice" />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://bretguice.com/" />
-        <meta name="twitter:card" content="summary" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Person',
-              name: 'Bret Guice',
-              url: 'https://bretguice.com/',
-              jobTitle: 'Athletics administrator',
-              worksFor: {
-                '@type': 'Organization',
-                name: 'Louisiana Tech Athletics',
-              },
-            }),
-          }}
-        />
-      </Head>
+      <Seo
+        title={title}
+        description={description}
+        path="/"
+        openGraphType="profile"
+        pageType="ProfilePage"
+      />
 
       <section className={classes.hero} aria-labelledby="page-title">
         <div>

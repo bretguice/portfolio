@@ -103,7 +103,7 @@ export default function HomePage() {
               />
             </div>
             <figcaption className={classes.visualCaption} id="fan-view-caption">
-              <strong>Visual chapter 01 · The view from the other side</strong>
+              <strong>Chapter 01 · The view from the other side</strong>
               A Louisiana Tech basketball game from a few rows up. When the work turns into reports, revenue goals, and web pages, this is the view I try to remember. Somebody is on the other side of the system, having the experience.
             </figcaption>
           </div>
@@ -131,7 +131,7 @@ export default function HomePage() {
               />
             </div>
             <figcaption className={classes.visualCaption} id="super-t-caption">
-              <strong>Visual chapter 02 · Before the job</strong>
+              <strong>Chapter 02 · Before the job</strong>
               The “T” was passed down by the student who wore it before me. The paint and shoulder pads look theatrical now. At the time, they gave a quiet person a role—and gave other students one more reason to join the experience.
             </figcaption>
           </div>
@@ -169,7 +169,7 @@ export default function HomePage() {
               />
             </div>
             <figcaption className={classes.visualCaption} id="gator-caption">
-              <strong>Visual chapter 03 · The work around the work</strong>
+              <strong>Chapter 03 · The work around the work</strong>
               After the Gator Bowl in Jacksonville. The sign records the result. I remember the people—the staff who made the event happen and the support that made the long days possible. Meaningful work is rarely an individual story.
             </figcaption>
           </div>

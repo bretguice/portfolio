@@ -1,5 +1,5 @@
-import Head from 'next/head';
 import Image from 'next/image';
+import Seo from '../../components/Seo/Seo';
 import classes from '../../styles/Work.module.css';
 
 const chapters = [
@@ -18,22 +18,12 @@ const repeatedSteps = [
 
 export default function WorkPage() {
   const year = new Date().getFullYear();
-  const description = 'Four stories about how Bret Guice questions assumptions, finds the real problem, and builds more useful systems and experiences.';
+  const title = 'How I Solve Problems — Selected Work by Bret Guice';
+  const description = 'Four stories about Bret Guice using clearer information, better evidence, repeatable systems and meaningful participation to solve real problems.';
 
   return (
     <>
-      <Head>
-        <title>Selected Work — Bret Guice</title>
-        <meta name="description" content={description} />
-        <meta name="theme-color" content="#f5f2eb" />
-        <meta name="robots" content="index,follow" />
-        <link rel="canonical" href="https://bretguice.com/work" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Selected Work — Bret Guice" />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://bretguice.com/work" />
-        <meta name="twitter:card" content="summary" />
-      </Head>
+      <Seo title={title} description={description} path="/work" />
 
       <header className={classes.hero} aria-labelledby="work-title">
         <p className={classes.eyebrow}>Selected work</p>

@@ -1,20 +1,18 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-const NotFound = () => {
-    return(
-        <>
-            <Head>
-                <title>Bret Guice | 404</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <div className="not-found">
-                <h1>Ooops</h1>
-                <h2>That page cannot be found!</h2>
-                <p>Go back to the <Link href='/'><a>Homepage</a></Link> </p>
-            </div>
-        </>
-    )
+export default function NotFound() {
+  return (
+    <>
+      <Head>
+        <title>Page not found — Bret Guice</title>
+        <meta name="robots" content="noindex" />
+      </Head>
+      <section className="not-found" aria-labelledby="not-found-title">
+        <p>404</p>
+        <h1 id="not-found-title">This page does not exist.</h1>
+        <p><Link href="/">Return to BretGuice.com</Link></p>
+      </section>
+    </>
+  );
 }
-
-export default NotFound;

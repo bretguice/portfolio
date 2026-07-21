@@ -28,7 +28,6 @@ export default function WorkPage() {
         <meta name="theme-color" content="#f5f2eb" />
         <meta name="robots" content="index,follow" />
         <link rel="canonical" href="https://bretguice.com/work" />
-        <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Selected Work — Bret Guice" />
         <meta property="og:description" content={description} />

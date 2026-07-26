@@ -395,35 +395,28 @@
   scroll-margin-top: 3rem;
 }
 
+.experienceFigure {
+  width: min(calc(100% - 3rem), 760px);
+  margin: clamp(4rem, 8vw, 7rem) auto 0;
+}
+
 .experienceImage {
   position: relative;
   width: 100%;
-  height: clamp(480px, 68vw, 850px);
-  margin: 0;
+  aspect-ratio: 4 / 3;
   background: #132127;
   overflow: hidden;
 }
 
-.experienceImage::after {
-  content: '';
-  position: absolute;
-  inset: 55% 0 0;
-  background: linear-gradient(transparent, rgba(10, 21, 24, .78));
-  pointer-events: none;
-}
-
-.experienceImage figcaption {
-  position: absolute;
-  right: max(1.5rem, calc((100% - var(--page)) / 2));
-  bottom: clamp(1.5rem, 4vw, 3.5rem);
-  z-index: 1;
-  width: min(calc(100% - 3rem), 440px);
+.experienceFigure figcaption {
+  width: min(100%, 520px);
+  margin: 1.2rem 0 0 auto;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, .45);
-  color: white;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
   font-family: var(--serif);
-  font-size: 1.05rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
 .experienceInner {
@@ -444,7 +437,7 @@
 .scaleImage {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 604 / 135;
   background: #d8d4cb;
   overflow: hidden;
 }
@@ -595,16 +588,9 @@
     padding: 0;
   }
 
-  .experienceImage {
-    height: auto;
-    min-height: 300px;
-    aspect-ratio: 3 / 2;
-  }
+  .experienceFigure { width: calc(100% - 2rem); }
 
-  .experienceImage figcaption {
-    right: 1rem;
-    width: calc(100% - 2rem);
-  }
+  .experienceImage { aspect-ratio: 4 / 3; }
 
   .scaleFigure { width: 100%; }
 }

@@ -160,15 +160,21 @@ export default function WorkPage() {
         </section>
 
         <section className={classes.experienceChapter} id="participation" aria-labelledby="participation-title">
-          <figure className={classes.experienceImage} aria-labelledby="arena-caption">
-            <Image
-              src="/images/work/participation-tech.jpg"
-              alt="Four Louisiana Tech students with T E C H painted across their chests raise their arms with the crowd"
-              fill
-              style={{ objectFit: 'cover', objectPosition: 'center 44%' }}
-              sizes="100vw"
-            />
-            <figcaption id="arena-caption">Four letters gave four students a role. The tradition gave everyone nearby a way to join them.</figcaption>
+          <figure className={classes.experienceFigure} aria-labelledby="arena-caption">
+            <div className={classes.experienceImage}>
+              <Image
+                src="/images/work/participation-tech.jpg"
+                alt="Louisiana Tech students painted blue with letters across their chests stand together at a football game"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                sizes="(max-width: 760px) calc(100vw - 2rem), 760px"
+              />
+            </div>
+            <figcaption id="arena-caption">
+              Painted Blue during my time as a Louisiana Tech student. The visible
+              tradition gave students a role—and gave everyone nearby a clear way to
+              join the section.
+            </figcaption>
           </figure>
 
           <div className={classes.experienceInner}>
@@ -190,7 +196,7 @@ export default function WorkPage() {
               <div className={classes.scaleImage}>
                 <Image
                   src="/images/work/participation-scale.jpg"
-                  alt="Louisiana Tech students gather around a large university flag in a crowded football section"
+                  alt="A wide line of Louisiana Tech students painted blue stands at the front of the football student section"
                   fill
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
                   sizes="(max-width: 760px) calc(100vw - 2rem), 680px"

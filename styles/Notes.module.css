@@ -1,0 +1,179 @@
+.shell { width: min(var(--page), calc(100% - 48px)); margin-inline: auto; }
+
+.eyebrow {
+  margin: 0;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.notesHero { padding: 116px 0 76px; }
+.notesHero h1 {
+  max-width: 850px;
+  margin: 23px 0 30px;
+  font-family: var(--serif);
+  font-size: clamp(70px, 10vw, 142px);
+  font-weight: 400;
+  line-height: .82;
+  letter-spacing: -.065em;
+}
+.heroIntro {
+  max-width: 610px;
+  margin: 0 0 74px auto;
+  color: #465258;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.25vw, 31px);
+  line-height: 1.35;
+}
+.heroRule {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.heroRule span:nth-child(2) { text-align: center; }
+.heroRule span:last-child { text-align: right; }
+
+.readingSection, .questionsSection { padding: 70px 0 92px; border-top: 1px solid var(--line); }
+.sectionHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 38px;
+}
+.sectionAside {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+}
+
+.noteCard { position: relative; display: block; color: inherit; text-decoration: none; }
+.featuredNote {
+  padding: 48px 52px 52px;
+  color: var(--paper);
+  background: var(--ink);
+  transition: transform .25s ease, background .25s ease;
+}
+.featuredNote:hover { transform: translateY(-4px); background: #1e2b31; }
+.noteCardMeta {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 76px;
+  color: #9eaaa9;
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.noteCardMeta span + span::before { margin-right: 18px; content: "/"; opacity: .55; }
+.noteCard h2 {
+  max-width: 870px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(42px, 6.4vw, 88px);
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: .96;
+}
+.noteQuestion {
+  max-width: 650px;
+  margin: 32px 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.1vw, 28px);
+  font-style: italic;
+  line-height: 1.35;
+}
+.noteDescription { max-width: 600px; margin: 0; color: #abb4b3; font-size: 15px; line-height: 1.65; }
+.textLink {
+  position: absolute;
+  right: 52px;
+  bottom: 52px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #78827f;
+  color: var(--paper);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.publishedNotesGrid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.publishedNote {
+  min-height: 470px;
+  padding: 32px 32px 92px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: background .25s ease, transform .25s ease;
+}
+.publishedNote:hover { background: #e8e3d8; transform: translateY(-3px); }
+.publishedNote .noteCardMeta { margin-bottom: 58px; color: var(--muted); }
+.publishedNote h2 { max-width: 460px; font-size: clamp(34px, 4vw, 57px); }
+.publishedNote .noteQuestion { max-width: 460px; margin-top: 24px; font-size: 20px; }
+.publishedNote .noteDescription { max-width: 470px; color: var(--muted); }
+.publishedNote .textLink { right: auto; bottom: 30px; left: 32px; color: var(--blue); border-bottom-color: rgba(22, 77, 112, .45); }
+
+.notesCoda { display: flex; justify-content: space-between; gap: 32px; padding: 34px 0 100px; color: var(--muted); font-family: var(--serif); font-style: italic; }
+.notesCoda p { margin: 0; }
+.notesCoda ul { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px 24px; margin: 0; padding: 0; list-style: none; font-family: var(--sans); font-size: 10px; font-style: normal; letter-spacing: .12em; text-transform: uppercase; }
+.siteFooter { display: flex; min-height: 170px; align-items: flex-start; justify-content: space-between; gap: 32px; padding: 36px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
+.siteFooter p { margin: 0; }
+
+.articleMain { padding-bottom: 100px; }
+.articleHeader { padding: 44px 0 74px; border-bottom: 1px solid var(--line); }
+.backLink { display: inline-block; margin-bottom: 92px; color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: .15em; text-decoration: none; text-transform: uppercase; }
+.articleKicker { display: flex; gap: 18px; margin-bottom: 28px; color: var(--muted); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.articleKicker span + span::before { margin-right: 18px; content: "/"; }
+.articleHeader h1 { max-width: 1000px; margin: 0; font-family: var(--serif); font-size: clamp(58px, 9vw, 128px); font-weight: 400; letter-spacing: -.06em; line-height: .88; }
+.articleDeck { max-width: 710px; margin: 46px 0 0 auto; color: #465258; font-family: var(--serif); font-size: clamp(23px, 2.5vw, 34px); font-style: italic; line-height: 1.35; }
+.articleBody { width: min(var(--copy), calc(100% - 48px)); margin: 0 auto; padding: 96px 0 110px; font-family: var(--serif); font-size: 20px; line-height: 1.72; }
+.articleBody p { margin: 0 0 30px; }
+.articleBody > p:first-of-type::first-letter { float: left; margin: 8px 9px 0 0; color: var(--blue); font-size: 76px; line-height: .72; }
+.articleSectionHeading { margin: 86px 0 30px; padding-top: 24px; border-top: 1px solid var(--line); font-family: var(--serif); font-size: clamp(32px, 4.5vw, 50px); font-weight: 400; letter-spacing: -.035em; line-height: 1.08; }
+.articleQuestions { margin: 8px 0 42px; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); list-style: none; }
+.articleQuestions li { margin: 0; padding: 8px 0; color: var(--blue); font-size: 23px; font-style: italic; line-height: 1.4; }
+.articleEnding { margin-top: 58px !important; font-size: 28px; font-style: italic; line-height: 1.45; }
+.continueReading { padding: 38px 0 0; border-top: 1px solid var(--line); }
+.continueReading > p { margin-bottom: 28px; }
+.continueReading a { display: grid; grid-template-columns: 60px 1fr auto; align-items: center; gap: 26px; padding: 34px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+.continueNumber { color: var(--muted); font-size: 11px; }
+.continueReading strong { display: block; font-family: var(--serif); font-size: clamp(29px, 4vw, 48px); font-weight: 400; line-height: 1.05; }
+.continueReading small { display: block; margin-top: 9px; color: var(--muted); font-family: var(--serif); font-size: 16px; font-style: italic; }
+.continueArrow { font-size: 28px; transition: transform .2s ease; }
+.continueReading a:hover .continueArrow { transform: translateX(6px); }
+
+@media (max-width: 760px) {
+  .shell { width: min(100% - 30px, var(--page)); }
+  .notesHero { padding: 82px 0 58px; }
+  .notesHero h1 { font-size: clamp(65px, 21vw, 96px); }
+  .heroIntro { margin: 48px 0 58px; }
+  .readingSection, .questionsSection { padding: 54px 0 70px; }
+  .sectionHeading { align-items: flex-start; flex-direction: column; }
+  .featuredNote { padding: 29px 25px 105px; }
+  .noteCardMeta { flex-wrap: wrap; gap: 10px; margin-bottom: 54px; }
+  .noteCardMeta span + span::before { margin-right: 10px; }
+  .textLink { right: auto; bottom: 34px; left: 25px; }
+  .publishedNotesGrid { grid-template-columns: 1fr; }
+  .publishedNote { min-height: 420px; padding: 26px 24px 90px; }
+  .publishedNote .textLink { left: 24px; }
+  .notesCoda, .siteFooter { flex-direction: column; }
+  .notesCoda ul { justify-content: flex-start; }
+  .articleHeader { padding-top: 30px; }
+  .backLink { margin-bottom: 70px; }
+  .articleDeck { margin-top: 36px; }
+  .articleBody { width: min(100% - 34px, var(--copy)); padding-top: 72px; font-size: 19px; }
+  .articleSectionHeading { margin-top: 68px; }
+  .articleQuestions li { font-size: 21px; }
+  .continueReading a { grid-template-columns: 36px 1fr auto; gap: 12px; }
+  .continueReading small { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .featuredNote, .publishedNote, .continueArrow { transition: none; }
+}

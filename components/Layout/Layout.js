@@ -20,6 +20,9 @@ export default function Layout({ children }) {
             <Link href="/work" aria-current={router.pathname === '/work' ? 'page' : undefined}>
               Work
             </Link>
+            <Link href="/notes" aria-current={router.pathname.startsWith('/notes') ? 'page' : undefined}>
+              Notes
+            </Link>
           </nav>
         </div>
       </header>

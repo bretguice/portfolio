@@ -147,41 +147,41 @@ export default function WorkPage() {
           </div>
         </section>
 
-        <section className={classes.systemChapter} id="repeatable" aria-labelledby="repeatable-title">
-          <div className={classes.systemVisual}>
-            <figure aria-labelledby="field-caption">
-              <div className={classes.workflowArtifact}>
-                <div className={classes.artifactHeader}>
-                  <span>Weekly football report</span>
-                  <span>Recurring build</span>
-                </div>
-                <ol aria-label="The repeated reporting process">
-                  {repeatedSteps.map((step) => <li key={step}>{step}</li>)}
-                </ol>
-                <p>Same four steps. Every week.</p>
-              </div>
-              <figcaption id="field-caption">
-                <strong>The work before the work</strong>
-                Writing down the repeated steps made the real problem visible before
-                I tried to automate it.
-              </figcaption>
-            </figure>
-          </div>
-
-          <div className={classes.systemStory}>
-            <div className={classes.chapterMarkerInline}>
+        <section className="systemsSection" id="repeatable" aria-labelledby="repeatable-title">
+          <div className="systemsStoryRow">
+            <div className={classes.chapterMarker}>
               <span>03</span>
               <p>Systems</p>
             </div>
-            <p className={classes.kicker}>Football reporting</p>
-            <h2 id="repeatable-title">A weekly report should not have to be rebuilt every week.</h2>
-            <p className={classes.standfirst}>The report was useful. Producing it had quietly become a second job.</p>
 
-            <p>My first thought was automation. That was too early.</p>
-            <p>I decided to map the steps before changing them. Some protected the report. Others survived only because the file had grown around them. Automating both would have made the same complicated process run faster.</p>
-            <p>Only then did I use formulas and scripts for the predictable work. The result was not a new dashboard. It was a calmer week, fewer places for mistakes to hide, and more time to read the report.</p>
-            <p className={classes.takeaway}>A good system removes repetition without removing judgment.</p>
+            <div className="systemsStory">
+              <p className={classes.kicker}>Football reporting</p>
+              <h2 id="repeatable-title">A weekly report should not have to be rebuilt every week.</h2>
+              <p className={`systemsStandfirst ${classes.standfirst}`}>The report was useful. Producing it had quietly become a second job.</p>
+
+              <p className="systemsBody">My first thought was automation. That was too early.</p>
+              <p className="systemsBody">I decided to map the steps before changing them. Some protected the report. Others survived only because the file had grown around them. Automating both would have made the same complicated process run faster.</p>
+              <p className="systemsBody">Only then did I use formulas and scripts for the predictable work. The result was not a new dashboard. It was a calmer week, fewer places for mistakes to hide, and more time to read the report.</p>
+              <p className={`systemsTakeaway ${classes.takeaway}`}>A good system removes repetition without removing judgment.</p>
+            </div>
           </div>
+
+          <figure className="systemsWorkflow" aria-labelledby="workflow-caption">
+            <div className="systemsWorkflowHeader">
+              <span>Weekly football report</span>
+              <span>Recurring build</span>
+            </div>
+            <ol aria-label="The repeated reporting process">
+              {repeatedSteps.map((step) => <li key={step}>{step}</li>)}
+            </ol>
+            <figcaption id="workflow-caption">
+              <strong>Same four steps. Every week.</strong>
+              <p>
+                Writing down the repeated steps made the real problem visible before
+                I tried to automate it.
+              </p>
+            </figcaption>
+          </figure>
         </section>
 
         <section className={classes.experienceChapter} id="participation" aria-labelledby="participation-title">
@@ -364,6 +364,172 @@ export default function WorkPage() {
           border-color: var(--orange);
         }
 
+        .systemsSection {
+          width: min(calc(100% - 3rem), var(--page));
+          margin: 0 auto;
+          padding: clamp(6rem, 12vw, 11rem) 0;
+          display: grid;
+          gap: clamp(4.5rem, 9vw, 8rem);
+          scroll-margin-top: 3rem;
+        }
+
+        .systemsStoryRow {
+          display: grid;
+          grid-template-columns: minmax(110px, .23fr) minmax(0, 1.77fr);
+          gap: clamp(3rem, 8vw, 8rem);
+          align-items: start;
+        }
+
+        .systemsStory {
+          max-width: 900px;
+          font-family: var(--serif);
+          font-size: clamp(1.12rem, 1.55vw, 1.3rem);
+          line-height: 1.72;
+        }
+
+        .systemsStory h2 {
+          max-width: 920px;
+          margin: 0 0 2rem;
+          font-family: var(--serif);
+          font-size: clamp(2.9rem, 5.7vw, 5.5rem);
+          font-weight: 400;
+          letter-spacing: -.058em;
+          line-height: .98;
+        }
+
+        .systemsBody {
+          max-width: 760px;
+          margin: 0 0 1.5rem;
+        }
+
+        .systemsStandfirst,
+        .systemsTakeaway {
+          max-width: 760px;
+        }
+
+        .systemsWorkflow {
+          width: min(100%, 1060px);
+          margin: 0 0 0 auto;
+          padding-top: clamp(2rem, 4vw, 3.25rem);
+          border-top: 1px solid var(--ink);
+        }
+
+        .systemsWorkflowHeader {
+          display: flex;
+          justify-content: space-between;
+          gap: 1.5rem;
+          align-items: baseline;
+          padding-bottom: 1rem;
+          border-bottom: 2px solid var(--ink);
+        }
+
+        .systemsWorkflowHeader span {
+          font-size: .66rem;
+          font-weight: 800;
+          letter-spacing: .14em;
+          line-height: 1.45;
+          text-transform: uppercase;
+        }
+
+        .systemsWorkflowHeader span:last-child {
+          color: var(--muted);
+          font-size: .62rem;
+          letter-spacing: .11em;
+        }
+
+        .systemsWorkflow ol {
+          counter-reset: system-step;
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .systemsWorkflow li {
+          counter-increment: system-step;
+          min-height: 175px;
+          padding: 1.7rem 1.4rem 1.7rem 0;
+          border-right: 1px solid var(--line);
+          font-family: var(--serif);
+          font-size: clamp(1.05rem, 1.45vw, 1.28rem);
+          line-height: 1.38;
+        }
+
+        .systemsWorkflow li:not(:first-child) {
+          padding-left: 1.4rem;
+        }
+
+        .systemsWorkflow li:last-child {
+          border-right: 0;
+        }
+
+        .systemsWorkflow li::before {
+          content: '0' counter(system-step);
+          display: block;
+          margin-bottom: 2.8rem;
+          color: var(--orange);
+          font-family: var(--sans);
+          font-size: .62rem;
+          font-weight: 800;
+          letter-spacing: .11em;
+        }
+
+        .systemsWorkflow figcaption {
+          display: grid;
+          grid-template-columns: minmax(0, .7fr) minmax(260px, 1.3fr);
+          gap: 2rem;
+          padding-top: 1.3rem;
+        }
+
+        .systemsWorkflow figcaption strong {
+          font-family: var(--serif);
+          font-size: 1rem;
+          font-style: italic;
+          font-weight: 400;
+        }
+
+        .systemsWorkflow figcaption p {
+          max-width: 560px;
+          margin: 0 0 0 auto;
+          color: var(--muted);
+          font-family: var(--serif);
+          font-size: 1rem;
+          line-height: 1.55;
+        }
+
+        @media (max-width: 960px) {
+          .systemsStoryRow {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+          }
+
+          .systemsStory {
+            margin-left: auto;
+          }
+
+          .systemsWorkflow ol {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .systemsWorkflow li:nth-child(2) {
+            border-right: 0;
+          }
+
+          .systemsWorkflow li:nth-child(-n+2) {
+            border-bottom: 1px solid var(--line);
+          }
+
+          .systemsWorkflow figcaption {
+            grid-template-columns: 1fr;
+          }
+
+          .systemsWorkflow figcaption p {
+            margin-left: 0;
+          }
+        }
+
         @media (max-width: 900px) {
           .featuredArticleInner {
             grid-template-columns: 1fr;
@@ -376,8 +542,35 @@ export default function WorkPage() {
         }
 
         @media (max-width: 760px) {
-          .featuredArticleInner {
+          .featuredArticleInner,
+          .systemsSection {
             width: min(calc(100% - 2rem), var(--page));
+          }
+
+          .systemsStory h2 {
+            overflow-wrap: anywhere;
+          }
+
+          .systemsWorkflowHeader {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: .4rem;
+          }
+
+          .systemsWorkflow ol {
+            grid-template-columns: 1fr;
+          }
+
+          .systemsWorkflow li,
+          .systemsWorkflow li:not(:first-child) {
+            min-height: 0;
+            padding: 1.4rem 0;
+            border-right: 0;
+            border-bottom: 1px solid var(--line);
+          }
+
+          .systemsWorkflow li::before {
+            margin-bottom: .75rem;
           }
         }
       `}</style>

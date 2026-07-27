@@ -234,6 +234,31 @@ export default function WorkPage() {
             </figure>
           </div>
         </section>
+
+        <aside className="featuredArticle" aria-labelledby="blue-bloods-feature-title">
+          <div className="featuredArticleInner">
+            <div className="featuredArticleMeta">
+              <span>Featured by Louisiana Tech Athletics</span>
+              <strong>Louisiana Tech Athletics</strong>
+              <time dateTime="2026-06-23">June 23, 2026</time>
+            </div>
+            <div className="featuredArticleContent">
+              <h2 id="blue-bloods-feature-title">More Than a Student Section: How Blue Bloods is Building a New Generation of Loyal Blue</h2>
+              <p>
+                Louisiana Tech&apos;s feature traces the collaborative work behind Blue Bloods and
+                highlights my role in using the digital access pass and Loyal Blue Points to simplify
+                student ticket access, track participation, and make attendance part of the student experience.
+              </p>
+              <a
+                href="https://latechsports.com/news/2026/6/23/general-blue-bloods"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the feature <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </aside>
       </article>
 
       <section className={classes.closing} aria-labelledby="closing-title">

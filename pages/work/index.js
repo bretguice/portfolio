@@ -102,6 +102,31 @@ export default function WorkPage() {
           </div>
         </section>
 
+        <aside className="featuredArticle" aria-labelledby="featured-article-title">
+          <div className="featuredArticleInner">
+            <div className="featuredArticleMeta">
+              <span>Featured by Louisiana Tech Athletics</span>
+              <strong>Louisiana Tech Athletics</strong>
+              <time dateTime="2026-07-27">July 27, 2026</time>
+            </div>
+            <div className="featuredArticleContent">
+              <h2 id="featured-article-title">Louisiana Tech Athletics Continues Elevating the Digital Fan Experience</h2>
+              <p>
+                Louisiana Tech highlighted the work behind its expanding fan-facing digital resources,
+                including redesigned ticket information, game-day guides, parking and seating resources,
+                and new ways to help fans find a clearer path through the athletics website.
+              </p>
+              <a
+                href="https://latechsports.com/news/2026/7/27/general-louisiana-tech-athletics-continues-elevating-the-digital-fan-experience"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the feature <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
         <section className={classes.dataChapter} id="evidence" aria-labelledby="evidence-title">
           <div className={classes.dataInner}>
             <div className={classes.chapterMarkerLight}>
@@ -225,6 +250,112 @@ export default function WorkPage() {
           <p>© {year} Bret Guice</p>
         </div>
       </footer>
+
+      <style jsx>{`
+        .featuredArticle {
+          background: var(--white);
+        }
+
+        .featuredArticleInner {
+          width: min(calc(100% - 3rem), var(--page));
+          margin: 0 auto;
+          padding: 0 0 clamp(5rem, 10vw, 9rem);
+          display: grid;
+          grid-template-columns: minmax(180px, .42fr) minmax(0, 1.58fr);
+          gap: clamp(2rem, 6vw, 6rem);
+          border-top: 1px solid var(--ink);
+        }
+
+        .featuredArticleMeta,
+        .featuredArticleContent {
+          padding-top: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .featuredArticleMeta {
+          color: var(--muted);
+          font-size: .78rem;
+          line-height: 1.65;
+        }
+
+        .featuredArticleMeta span {
+          display: block;
+          margin-bottom: 1rem;
+          color: var(--orange);
+          font-size: .66rem;
+          font-weight: 800;
+          letter-spacing: .14em;
+          text-transform: uppercase;
+        }
+
+        .featuredArticleMeta strong,
+        .featuredArticleMeta time {
+          display: block;
+        }
+
+        .featuredArticleMeta strong {
+          color: var(--ink);
+        }
+
+        .featuredArticleContent {
+          border-bottom: 1px solid var(--line);
+          padding-bottom: clamp(2rem, 4vw, 3.5rem);
+        }
+
+        .featuredArticleContent h2 {
+          max-width: 790px;
+          margin: 0 0 1.3rem;
+          font-family: var(--serif);
+          font-size: clamp(2rem, 4.1vw, 4rem);
+          font-weight: 400;
+          letter-spacing: -.045em;
+          line-height: 1.02;
+        }
+
+        .featuredArticleContent p {
+          max-width: 720px;
+          margin: 0 0 1.6rem;
+          color: var(--muted);
+          font-family: var(--serif);
+          font-size: clamp(1.06rem, 1.55vw, 1.25rem);
+          line-height: 1.65;
+        }
+
+        .featuredArticleContent a {
+          display: inline-flex;
+          align-items: center;
+          gap: .65rem;
+          padding-bottom: .35rem;
+          color: var(--blue);
+          border-bottom: 1px solid var(--blue);
+          font-size: .75rem;
+          font-weight: 800;
+          letter-spacing: .11em;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+
+        .featuredArticleContent a:hover {
+          color: var(--orange);
+          border-color: var(--orange);
+        }
+
+        @media (max-width: 900px) {
+          .featuredArticleInner {
+            grid-template-columns: 1fr;
+            gap: 0;
+          }
+
+          .featuredArticleMeta {
+            max-width: 360px;
+          }
+        }
+
+        @media (max-width: 760px) {
+          .featuredArticleInner {
+            width: min(calc(100% - 2rem), var(--page));
+          }
+        }
+      `}</style>
     </>
   );
 }

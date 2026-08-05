@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Seo, { SITE_DESCRIPTION } from '../components/Seo/Seo';
 import classes from '../styles/Home.module.css';
 
@@ -181,6 +182,32 @@ export default function HomePage() {
           </div>
         </section>
       </article>
+
+      <aside className={classes.featuredMedia} aria-labelledby="featured-conversation-title">
+        <div className={classes.featuredMediaInner}>
+          <Link className={classes.featuredMediaImage} href="/conversation" aria-label="Watch Bret Guice on the Tech Drive podcast">
+            <Image
+              src="/images/media/tech-drive.jpg"
+              alt="Bret Guice speaking with Kyle Shaspberger on the Tech Drive podcast"
+              fill
+              style={{ objectFit: 'cover' }}
+              sizes="(max-width: 800px) calc(100vw - 2rem), 500px"
+            />
+            <span className={classes.playMark} aria-hidden="true">▶</span>
+          </Link>
+          <div className={classes.featuredMediaCopy}>
+            <p className={classes.sectionLabel}>Featured conversation</p>
+            <h2 id="featured-conversation-title">Building better fan experiences on Tech Drive.</h2>
+            <p>
+              A conversation about ticket operations, technology, and designing a
+              clearer path from interest to game day.
+            </p>
+            <Link className={classes.featuredMediaLink} href="/conversation">
+              Watch the conversation <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
+      </aside>
 
       <section className={classes.closing} aria-labelledby="closing-title">
         <div className={classes.closingInner}>

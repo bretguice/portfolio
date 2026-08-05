@@ -305,6 +305,80 @@
   line-height: 1.55;
 }
 
+.featuredMedia {
+  padding: clamp(4.5rem, 9vw, 7rem) 0;
+  background: var(--paper);
+}
+
+.featuredMediaInner {
+  width: min(calc(100% - 3rem), var(--page));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.featuredMediaImage {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #d8d4cb;
+}
+
+.featuredMediaImage img { transition: transform 220ms ease; }
+.featuredMediaImage:hover img { transform: scale(1.018); }
+
+.playMark {
+  position: absolute;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: grid;
+  place-items: center;
+  padding-left: .15rem;
+  border-radius: 50%;
+  color: white;
+  background: var(--orange);
+  box-shadow: 0 6px 20px rgba(23, 32, 29, .24);
+  font-size: .9rem;
+}
+
+.featuredMediaCopy { max-width: 560px; }
+
+.featuredMediaCopy h2 {
+  margin: 0 0 1.35rem;
+  font-family: var(--serif);
+  font-size: clamp(2.45rem, 4.6vw, 4.3rem);
+  font-weight: 400;
+  letter-spacing: -.052em;
+  line-height: 1;
+}
+
+.featuredMediaCopy > p:not(.sectionLabel) {
+  max-width: 520px;
+  margin: 0 0 1.7rem;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.featuredMediaLink {
+  display: inline-block;
+  padding-bottom: .18rem;
+  border-bottom: 1px solid var(--orange);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.featuredMediaLink:hover { color: var(--blue); }
+
 .closing {
   color: white;
   background: var(--ink);
@@ -357,7 +431,8 @@
   .hero,
   .storySection,
   .visualChapterInner,
-  .sharedChapter .visualChapterInner {
+  .sharedChapter .visualChapterInner,
+  .featuredMediaInner {
     grid-template-columns: 1fr;
   }
 
@@ -394,6 +469,7 @@
   .questionsInner,
   .visualChapterInner,
   .audienceInner,
+  .featuredMediaInner,
   .closingInner,
   .footerInner {
     width: min(calc(100% - 2rem), var(--page));
